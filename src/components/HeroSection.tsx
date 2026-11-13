@@ -57,7 +57,11 @@ export default function HeroSection({ onOpenBooking }: HeroSectionProps) {
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-secondary leading-tight sm:leading-snug font-heading">
-              Reverse Your HbA1c of 7.5 or Above{" "}
+              Reverse Your{" "}
+              <span className="text-red-600 font-black whitespace-nowrap">
+                HbA1c of 7.5
+              </span>{" "}
+              or Above{" "}
               <span className="text-primary block sm:inline">Back to Normal</span>
             </h1>
 
