@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CalendarCheck, ShieldCheck, Play, Sparkles, CheckCircle2 } from "lucide-react";
+import { CalendarCheck, Play, Sparkles, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 
 interface HeroSectionProps {
@@ -66,47 +66,12 @@ export default function HeroSection({ onOpenBooking }: HeroSectionProps) {
             </p>
           </motion.div>
 
-          {/* 3 Animated Rotating Benefit Badges */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch justify-center gap-2.5 sm:gap-3 text-xs sm:text-sm font-bold text-secondary w-full max-w-3xl mx-auto"
-          >
-            {/* Badge 1 */}
-            <div className="relative flex-1 overflow-hidden rounded-xl sm:rounded-full p-[1.5px] shadow-sm">
-              <div className="absolute left-1/2 top-1/2 aspect-square w-[250%] -translate-x-1/2 -translate-y-1/2 animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#10b981_50%,transparent_100%)] opacity-80" />
-              <div className="relative flex items-center justify-center gap-2 bg-white/95 backdrop-blur px-3 sm:px-4 py-2 sm:py-2.5 rounded-[10px] sm:rounded-full text-center leading-tight h-full w-full">
-                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                <span>10+ years of experience</span>
-              </div>
-            </div>
-
-            {/* Badge 2 */}
-            <div className="relative flex-1 overflow-hidden rounded-xl sm:rounded-full p-[1.5px] shadow-sm">
-              <div className="absolute left-1/2 top-1/2 aspect-square w-[250%] -translate-x-1/2 -translate-y-1/2 animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#10b981_50%,transparent_100%)] opacity-80" />
-              <div className="relative flex items-center justify-center gap-2 bg-white/95 backdrop-blur px-3 sm:px-4 py-2 sm:py-2.5 rounded-[10px] sm:rounded-full text-center leading-tight h-full w-full">
-                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                <span>Personalised plan</span>
-              </div>
-            </div>
-
-            {/* Badge 3 */}
-            <div className="relative flex-1 overflow-hidden rounded-xl sm:rounded-full p-[1.5px] shadow-sm">
-              <div className="absolute left-1/2 top-1/2 aspect-square w-[250%] -translate-x-1/2 -translate-y-1/2 animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#10b981_50%,transparent_100%)] opacity-80" />
-              <div className="relative flex items-center justify-center gap-2 bg-white/95 backdrop-blur px-3 sm:px-4 py-2 sm:py-2.5 rounded-[10px] sm:rounded-full text-center leading-tight h-full w-full">
-                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                <span>Online consultation from home</span>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* VSL Video Container */}
+          {/* VSL Video Container - Placed immediately after 'Without Starving or Giving Up Roti' */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="mt-8 sm:mt-12 relative w-full max-w-3xl mx-auto aspect-video bg-gradient-to-br from-emerald-950 via-teal-950 to-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden group border-4 border-white/80"
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="mt-6 sm:mt-10 relative w-full max-w-3xl mx-auto aspect-video bg-gradient-to-br from-emerald-950 via-teal-950 to-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden group border-4 border-white/80"
           >
             {isPlaying ? (
               <iframe
@@ -163,7 +128,7 @@ export default function HeroSection({ onOpenBooking }: HeroSectionProps) {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
             className="mt-8 sm:mt-11 flex flex-col items-center justify-center gap-3.5"
           >
             <button
@@ -185,6 +150,41 @@ export default function HeroSection({ onOpenBooking }: HeroSectionProps) {
               <span>Online from home</span>
               <span className="hidden sm:inline text-gray-300">&bull;</span>
               <span>100% Confidential</span>
+            </div>
+          </motion.div>
+
+          {/* 3 Animated Rotating Benefit Badges - Placed after Book Your Free Consultation */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+            className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch justify-center gap-2.5 sm:gap-3 text-xs sm:text-sm font-bold text-secondary w-full max-w-3xl mx-auto"
+          >
+            {/* Badge 1 */}
+            <div className="relative flex-1 overflow-hidden rounded-xl sm:rounded-full p-[1.5px] shadow-sm">
+              <div className="absolute left-1/2 top-1/2 aspect-square w-[250%] -translate-x-1/2 -translate-y-1/2 animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#10b981_50%,transparent_100%)] opacity-80" />
+              <div className="relative flex items-center justify-center gap-2 bg-white/95 backdrop-blur px-3 sm:px-4 py-2 sm:py-2.5 rounded-[10px] sm:rounded-full text-center leading-tight h-full w-full">
+                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                <span>10+ years of experience</span>
+              </div>
+            </div>
+
+            {/* Badge 2 */}
+            <div className="relative flex-1 overflow-hidden rounded-xl sm:rounded-full p-[1.5px] shadow-sm">
+              <div className="absolute left-1/2 top-1/2 aspect-square w-[250%] -translate-x-1/2 -translate-y-1/2 animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#10b981_50%,transparent_100%)] opacity-80" />
+              <div className="relative flex items-center justify-center gap-2 bg-white/95 backdrop-blur px-3 sm:px-4 py-2 sm:py-2.5 rounded-[10px] sm:rounded-full text-center leading-tight h-full w-full">
+                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                <span>Personalised plan</span>
+              </div>
+            </div>
+
+            {/* Badge 3 */}
+            <div className="relative flex-1 overflow-hidden rounded-xl sm:rounded-full p-[1.5px] shadow-sm">
+              <div className="absolute left-1/2 top-1/2 aspect-square w-[250%] -translate-x-1/2 -translate-y-1/2 animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#10b981_50%,transparent_100%)] opacity-80" />
+              <div className="relative flex items-center justify-center gap-2 bg-white/95 backdrop-blur px-3 sm:px-4 py-2 sm:py-2.5 rounded-[10px] sm:rounded-full text-center leading-tight h-full w-full">
+                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                <span>Online consultation from home</span>
+              </div>
             </div>
           </motion.div>
         </div>

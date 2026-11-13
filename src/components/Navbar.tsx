@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Activity, CalendarCheck, ShieldCheck } from "lucide-react";
+import { CalendarCheck } from "lucide-react";
+import Image from "next/image";
 
 interface NavbarProps {
   onOpenBooking: () => void;
@@ -26,24 +27,31 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#fdfbf7]/90 backdrop-blur-md shadow-sm border-b border-emerald-900/10 py-3 sm:py-3.5"
-          : "bg-transparent py-4 sm:py-5"
+          ? "bg-[#fdfbf7]/95 backdrop-blur-md shadow-sm border-b border-emerald-900/10 py-2.5 sm:py-3"
+          : "bg-transparent py-3.5 sm:py-4"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand */}
+        {/* Brand with Logo */}
         <a href="#" className="flex items-center gap-2.5 sm:gap-3 group">
-          <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-gradient-to-br from-emerald-600 to-teal-800 flex items-center justify-center text-white shadow-md shadow-emerald-700/20 group-hover:scale-105 transition-transform">
-            <Activity className="w-5 h-5 sm:w-6 sm:h-6" />
+          <div className="bg-white px-2.5 py-1 sm:py-1.5 rounded-xl border border-emerald-950/10 shadow-xs flex items-center justify-center transition-transform group-hover:scale-102">
+            <Image
+              src="/images/logo.jpeg"
+              alt="EFITBITE - Where Science Meets Smart Eating"
+              width={140}
+              height={44}
+              className="h-8 sm:h-10 w-auto object-contain"
+              priority
+            />
           </div>
-          <div className="flex flex-col">
-            <span className="text-xl sm:text-2xl font-bold tracking-tight text-secondary font-heading leading-tight flex items-center gap-1.5">
+          <div className="hidden sm:flex flex-col border-l border-emerald-900/15 pl-2.5 sm:pl-3">
+            <span className="text-sm sm:text-base font-bold tracking-tight text-secondary font-heading leading-tight flex items-center gap-1.5">
               Dt. Neelam
-              <span className="inline-flex items-center justify-center text-[10px] font-semibold bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded-full border border-emerald-200">
+              <span className="inline-flex items-center justify-center text-[9px] font-semibold bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded-full border border-emerald-200">
                 M.Sc
               </span>
             </span>
-            <span className="text-[10px] sm:text-xs text-foreground/75 tracking-wider uppercase font-semibold">
+            <span className="text-[9px] sm:text-[10px] text-foreground/75 tracking-wider uppercase font-semibold">
               Medical Physiology &bull; Diabetes Expert
             </span>
           </div>

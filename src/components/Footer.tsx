@@ -1,6 +1,6 @@
 "use client";
 
-import { Activity } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,17 +9,22 @@ export default function Footer() {
     <footer className="bg-secondary text-white/80 py-12 sm:py-16 border-t border-emerald-800/40 pb-24 sm:pb-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10">
-          {/* Logo */}
-          <div className="flex items-center gap-2.5 mb-4">
-            <div className="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 flex items-center justify-center">
-              <Activity className="w-5 h-5" />
-            </div>
-            <span className="text-2xl font-bold tracking-tight text-white font-heading">
-              Dt. Neelam
-            </span>
+          {/* Logo Badge in Footer */}
+          <div className="inline-flex items-center justify-center bg-white px-5 py-2.5 rounded-2xl shadow-lg border border-white/20 mb-5">
+            <Image
+              src="/images/logo.jpeg"
+              alt="EFITBITE - Where Science Meets Smart Eating"
+              width={180}
+              height={55}
+              className="h-10 sm:h-12 w-auto object-contain"
+            />
           </div>
 
-          <p className="text-sm font-semibold text-emerald-300 uppercase tracking-widest mb-3">
+          <h3 className="text-2xl font-bold tracking-tight text-white font-heading">
+            Dt. Neelam
+          </h3>
+
+          <p className="text-sm font-semibold text-emerald-300 uppercase tracking-widest mt-1 mb-3">
             Master’s in Medical Physiology &bull; Diabetes and Weight Loss Expert
           </p>
 
@@ -50,11 +55,11 @@ export default function Footer() {
         {/* Medical & Nutritional Disclaimer */}
         <div className="pt-8 border-t border-emerald-800/50 max-w-4xl mx-auto text-center space-y-4">
           <p className="text-xs text-emerald-200/50 leading-relaxed">
-            <strong>Medical Disclaimer:</strong> The nutritional plans and guidance provided by Dt. Neelam are based on clinical nutrition, lifestyle adjustments, and medical physiology principles. This program works alongside your physician&rsquo;s treatment, not in place of it. Never discontinue or adjust prescription diabetes medication without consulting your doctor. Results may vary depending on individual physiological responsiveness and consistency.
+            <strong>Medical Disclaimer:</strong> The nutritional plans and guidance provided by Dt. Neelam (EFITBITE) are based on clinical nutrition, lifestyle adjustments, and medical physiology principles. This program works alongside your physician&rsquo;s treatment, not in place of it. Never discontinue or adjust prescription diabetes medication without consulting your doctor. Results may vary depending on individual physiological responsiveness and consistency.
           </p>
 
           <p className="text-xs text-emerald-200/60">
-            &copy; {currentYear} Dt. Neelam Diabetes &amp; Weight Loss Care. All rights reserved.
+            &copy; {currentYear} EFITBITE &bull; Dt. Neelam Diabetes &amp; Weight Loss Care. All rights reserved.
           </p>
         </div>
       </div>

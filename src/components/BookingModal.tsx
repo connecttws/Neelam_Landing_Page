@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { 
   X, 
   CalendarCheck, 
@@ -86,9 +87,20 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
             <X className="w-5 h-5" />
           </button>
 
-          <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-emerald-300 bg-white/10 px-3 py-1 rounded-full border border-white/15 mb-2">
-            100% Free Consultation
-          </span>
+          <div className="flex items-center gap-2.5 mb-2.5">
+            <div className="bg-white px-2.5 py-1 rounded-xl shadow-xs flex items-center justify-center">
+              <Image
+                src="/images/logo.jpeg"
+                alt="EFITBITE"
+                width={105}
+                height={30}
+                className="h-6 sm:h-7 w-auto object-contain"
+              />
+            </div>
+            <span className="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-emerald-300 bg-white/10 px-2.5 py-1 rounded-full border border-white/15">
+              100% Free Consultation
+            </span>
+          </div>
 
           <h3 className="text-xl sm:text-2xl font-extrabold text-white font-heading">
             Book Your Free Consultation

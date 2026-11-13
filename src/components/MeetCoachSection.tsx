@@ -55,9 +55,15 @@ export default function MeetCoachSection({ onOpenBooking }: MeetCoachSectionProp
                 </div>
               ) : (
                 <div className="w-full h-full flex flex-col items-center justify-between text-center py-6 px-4">
-                  {/* Top Badge */}
-                  <div className="w-20 h-20 rounded-3xl bg-primary/20 border border-emerald-400/30 flex items-center justify-center text-emerald-300 shadow-inner">
-                    <Stethoscope className="w-10 h-10" />
+                  {/* Top Brand Logo Badge */}
+                  <div className="bg-white px-4 py-2 rounded-2xl shadow-md border border-white/20 flex items-center justify-center">
+                    <Image
+                      src="/images/logo.jpeg"
+                      alt="EFITBITE - Where Science Meets Smart Eating"
+                      width={160}
+                      height={48}
+                      className="h-10 w-auto object-contain"
+                    />
                   </div>
 
                   <div className="my-auto">
