@@ -9,6 +9,7 @@ import WhyItHappensSection from "@/components/WhyItHappensSection";
 import MethodSection from "@/components/MethodSection";
 import MeetCoachSection from "@/components/MeetCoachSection";
 import FAQSection from "@/components/FAQSection";
+import WebsiteSection from "@/components/WebsiteSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
 import Footer from "@/components/Footer";
 import BookingModal from "@/components/BookingModal";
@@ -45,22 +46,25 @@ export default function Home() {
       {/* 6. The Method (3 Steps): 01 Understand, 02 Personalise, 03 Track & Adjust */}
       <MethodSection onOpenBooking={handleOpenBooking} />
 
-      {/* 7. Meet Dt. Neelam: Master's in Medical Physiology, 17+ Certs, 10 Yrs, Signature Quote */}
+      {/* 7. Meet D.t Neelam: Master's in Medical Physiology, 17+ Certs, 10 Yrs, Signature Quote */}
       <MeetCoachSection onOpenBooking={handleOpenBooking} />
 
       {/* 8. Frequently Asked Questions: Accordion format */}
       <FAQSection onOpenBooking={handleOpenBooking} />
 
-      {/* 9. Final Urgency CTA: "Your HbA1c Won't Fix Itself. Start Today." + 10 Slots Urgency */}
+      {/* 9. Want to Know More About HbA1c: Official Website & Program Exploration */}
+      <WebsiteSection />
+
+      {/* 10. Final Urgency CTA: "Your HbA1c Won't Fix Itself. Start Today." + 10 Slots Urgency */}
       <FinalCtaSection onOpenBooking={handleOpenBooking} />
 
-      {/* 10. Comprehensive Professional Footer */}
+      {/* 11. Comprehensive Professional Footer */}
       <Footer />
 
-      {/* 11. Sticky Mobile Quick Booking Bar */}
+      {/* 12. Sticky Mobile Quick Booking Bar */}
       <StickyMobileBar onOpenBooking={handleOpenBooking} />
 
-      {/* 12. Interactive Lead Capture Booking Modal with CRM Tracker Compatibility */}
+      {/* 13. Interactive Lead Capture Booking Modal with CRM Tracker Compatibility */}
       <BookingModal isOpen={isBookingOpen} onClose={handleCloseBooking} />
     </main>
   );
