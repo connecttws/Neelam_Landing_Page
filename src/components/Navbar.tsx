@@ -44,15 +44,16 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
               priority
             />
           </div>
-          <div className="hidden sm:flex flex-col border-l border-emerald-900/15 pl-2.5 sm:pl-3">
+          <div className="hidden sm:flex flex-col border-l border-emerald-900/15 pl-2.5 sm:pl-3 justify-center">
             <span className="text-sm sm:text-base font-bold tracking-tight text-secondary font-heading leading-tight flex items-center gap-1.5">
-              Dt. Neelam
+              D.t Neelam
               <span className="inline-flex items-center justify-center text-[9px] font-semibold bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded-full border border-emerald-200">
                 M.Sc
               </span>
             </span>
-            <span className="text-[9px] sm:text-[10px] text-foreground/75 tracking-wider uppercase font-semibold">
-              Medical Physiology &bull; Weight Loss &amp; Diabetes Expert
+            <span className="text-[8.5px] sm:text-[9.5px] text-foreground/75 tracking-wider uppercase font-semibold mt-0.5 leading-snug">
+              Medical Physiology &bull;<br />
+              Weight Loss &amp; Diabetes Expert
             </span>
           </div>
         </a>
