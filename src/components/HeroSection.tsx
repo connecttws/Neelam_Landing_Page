@@ -23,18 +23,6 @@ export default function HeroSection({ onOpenBooking }: HeroSectionProps) {
 
         {/* Ambient warm amber accent blur */}
         <div className="absolute top-24 right-[-10%] w-[320px] md:w-[480px] h-[320px] md:h-[480px] bg-amber-100/40 rounded-full blur-3xl"></div>
-
-        {/* Floating subtle elements */}
-        <motion.div
-          animate={{ y: [0, -18, 0], rotate: [0, 6, 0] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-36 left-[8%] w-20 h-20 rounded-full border border-emerald-500/15 bg-gradient-to-br from-emerald-100/40 to-transparent hidden sm:block"
-        />
-        <motion.div
-          animate={{ y: [0, 22, 0], rotate: [0, -8, 0] }}
-          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-24 right-[10%] w-28 h-28 rounded-3xl border border-amber-500/15 bg-gradient-to-bl from-amber-100/30 to-transparent transform rotate-12 hidden sm:block"
-        />
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
@@ -47,7 +35,7 @@ export default function HeroSection({ onOpenBooking }: HeroSectionProps) {
             className="inline-flex items-center gap-2 rounded-full bg-emerald-100/80 px-4 py-1.5 text-xs sm:text-sm font-bold text-emerald-900 border border-emerald-300/60 mb-5 shadow-xs"
           >
             <Sparkles className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
-            <span>Science-Backed Diabetes Reversal &amp; Metabolism Care</span>
+            <span>Science-Based Diabetes Reversal &amp; Metabolism Care</span>
           </motion.div>
 
           {/* Main Headline & Subheading */}
@@ -57,12 +45,11 @@ export default function HeroSection({ onOpenBooking }: HeroSectionProps) {
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-secondary leading-tight sm:leading-snug font-heading">
-              Reverse Your{" "}
+              <span>Reverse Your </span>
               <span className="text-red-600 font-black whitespace-nowrap">
-                HbA1c of 7.5
-              </span>{" "}
-              or Above{" "}
-              <span className="text-primary block sm:inline">Back to Normal</span>
+                HbA1c
+              </span>
+              <span className="block text-primary mt-1 sm:mt-2">Back to Normal</span>
             </h1>
 
             <p className="mt-4 sm:mt-5 text-base sm:text-2xl font-bold text-emerald-950/85 max-w-3xl mx-auto leading-relaxed">

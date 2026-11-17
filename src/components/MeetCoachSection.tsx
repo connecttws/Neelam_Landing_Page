@@ -6,11 +6,10 @@ import {
   Award, 
   Clock, 
   CalendarCheck, 
-  CheckCircle2, 
   HeartHandshake,
   Quote,
   ShieldCheck,
-  Stethoscope
+  CheckCircle2
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -31,7 +30,7 @@ export default function MeetCoachSection({ onOpenBooking }: MeetCoachSectionProp
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
           
-          {/* Coach Photo / Visual Authority Card */}
+          {/* Coach Photo Card */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -39,19 +38,36 @@ export default function MeetCoachSection({ onOpenBooking }: MeetCoachSectionProp
             transition={{ duration: 0.8 }}
             className="w-full lg:w-1/2 flex justify-center lg:justify-end"
           >
-            <div className="relative w-full max-w-md aspect-[4/5] rounded-[2.5rem] bg-gradient-to-b from-emerald-800/40 via-teal-900/30 to-[#031d16] border border-emerald-600/30 overflow-hidden shadow-2xl flex flex-col items-center justify-center p-8 group">
-              {/* Photo or Medical Illustration */}
+            <div className="relative w-full max-w-md aspect-[4/5] rounded-[2.5rem] bg-gradient-to-b from-emerald-800/40 via-teal-900/30 to-[#031d16] border border-emerald-600/30 overflow-hidden shadow-2xl flex flex-col items-center justify-center group">
               {!imageError ? (
                 <div className="relative w-full h-full">
                   <Image
-                    src="/images/photo-neelam.png"
-                    alt="Dt. Neelam - Diabetes & Weight Loss Expert"
+                    src="/images/dr-neelam-1411x1536.webp"
+                    alt="D.t Neelam - Diabetes & Weight Loss Expert"
                     fill
-                    className="object-cover rounded-[2rem]"
+                    className="object-cover object-top"
                     onError={() => setImageError(true)}
+                    priority
                   />
-                  {/* Subtle gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#04281e] via-transparent to-transparent opacity-60"></div>
+                  {/* Bottom subtle gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#04281e]/85 via-transparent to-transparent pointer-events-none"></div>
+
+                  {/* Name badge overlay at bottom of photo */}
+                  <div className="absolute bottom-5 left-5 right-5 z-20 bg-emerald-950/85 backdrop-blur-md border border-emerald-600/30 rounded-2xl p-3.5 shadow-lg">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="text-lg font-bold text-white font-heading">
+                          D.t Neelam
+                        </h4>
+                        <p className="text-xs text-emerald-300 font-medium">
+                          Master&rsquo;s in Medical Physiology
+                        </p>
+                      </div>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-200 bg-white/10 px-2.5 py-1 rounded-full border border-white/15">
+                        10+ Yrs Exp
+                      </span>
+                    </div>
+                  </div>
                 </div>
               ) : (
                 <div className="w-full h-full flex flex-col items-center justify-between text-center py-6 px-4">
@@ -71,14 +87,13 @@ export default function MeetCoachSection({ onOpenBooking }: MeetCoachSectionProp
                       Medical Physiology
                     </span>
                     <h4 className="text-3xl font-extrabold text-white mt-3 font-heading">
-                      Dt. Neelam
+                      D.t Neelam
                     </h4>
                     <p className="text-emerald-200/90 text-sm mt-1 font-semibold">
                       Diabetes &amp; Weight Loss Specialist
                     </p>
                   </div>
 
-                  {/* Highlights at bottom of card */}
                   <div className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-left space-y-2 backdrop-blur-sm">
                     <div className="flex items-center gap-2 text-xs font-semibold text-emerald-200">
                       <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
@@ -93,7 +108,7 @@ export default function MeetCoachSection({ onOpenBooking }: MeetCoachSectionProp
               )}
 
               {/* Verified Authority Pill floating over card */}
-              <div className="absolute top-4 left-4 z-20 bg-emerald-950/80 backdrop-blur-md border border-emerald-500/40 text-emerald-300 text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
+              <div className="absolute top-4 left-4 z-20 bg-emerald-950/85 backdrop-blur-md border border-emerald-500/40 text-emerald-300 text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
                 <ShieldCheck className="w-4 h-4 text-primary" />
                 <span>Verified Clinical Expert</span>
               </div>
@@ -114,7 +129,7 @@ export default function MeetCoachSection({ onOpenBooking }: MeetCoachSectionProp
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white font-heading">
-              MEET DT NEELAM
+              MEET D.t NEELAM
             </h2>
 
             <h3 className="text-lg sm:text-2xl font-bold text-emerald-300 tracking-wide mt-2 mb-6">
@@ -155,12 +170,12 @@ export default function MeetCoachSection({ onOpenBooking }: MeetCoachSectionProp
                 &ldquo;I don’t hand out diet charts. I understand your body first, then build your plan.&rdquo;
               </p>
               <div className="mt-2 text-xs font-semibold text-emerald-400">
-                &mdash; Dt. Neelam, M.Sc Medical Physiology
+                &mdash; D.t Neelam, M.Sc Medical Physiology
               </div>
             </div>
 
             <p className="text-sm sm:text-base text-white/80 leading-relaxed mb-8">
-              With a deep background in Medical Physiology, Dt Neelam bridges the gap between medical science and daily Indian eating habits. Instead of forcing you to cut out rotis or survive on bland salads, she identifies your metabolic roadblocks and designs a sustainable pathway to normal blood sugar.
+              With a deep background in Medical Physiology, D.t Neelam bridges the gap between medical science and daily Indian eating habits. Instead of forcing you to cut out rotis or survive on bland salads, she identifies your metabolic roadblocks and designs a sustainable pathway to normal blood sugar.
             </p>
 
             {/* CTA Button */}

@@ -8,10 +8,11 @@ export default function TrustStrip() {
     "10+ Years of Experience",
     "Master’s in Medical Physiology",
     "17+ Diploma & Certificate Programs",
+    "Published Research on Diabetes & Metabolism",
     "Personalised Plan (No Starving)",
-    "Reverse HbA1c 7.5+ Safely",
+    "Reverse HbA1c Safely",
     "Online Consultation From Home",
-    "Works Alongside Your Doctor's Treatment",
+    "Alongside Your Doctor's Treatment",
     "Keep Eating Your Favourite Roti",
   ];
 
@@ -30,7 +31,7 @@ export default function TrustStrip() {
         transition={{
           repeat: Infinity,
           ease: "linear",
-          duration: 32,
+          duration: 65,
         }}
       >
         {repeatedPoints.map((point, index) => (

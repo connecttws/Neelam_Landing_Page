@@ -52,7 +52,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
               </span>
             </span>
             <span className="text-[9px] sm:text-[10px] text-foreground/75 tracking-wider uppercase font-semibold">
-              Medical Physiology &bull; Diabetes Expert
+              Medical Physiology &bull; Weight Loss &amp; Diabetes Expert
             </span>
           </div>
         </a>
@@ -81,7 +81,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
             href="#meet-coach"
             className="hover:text-primary transition-colors py-1"
           >
-            Meet Dt. Neelam
+            Meet D.t Neelam
           </a>
           <a
             href="#faq"

@@ -44,7 +44,7 @@ export default function Footer() {
               The 3-Step Method
             </a>
             <a href="#meet-coach" className="hover:text-emerald-300 transition-colors">
-              Meet Dt. Neelam
+              Meet D.t Neelam
             </a>
             <a href="#faq" className="hover:text-emerald-300 transition-colors">
               FAQ
